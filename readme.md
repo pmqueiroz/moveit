@@ -45,7 +45,7 @@
 
 #### Layout
 
-[![Button Alternative](https://github-readme-perks.vercel.app/api/button?content=Open%20on%20Figma%20%20&logo=figma&bgColor=%2315C3D6)](https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/Move.it-1.0/duplicate)
+[![Button Alternative](https://github-readme-perks.vercel.app/api/button?content=Open%20on%20Figma%20%20&logo=figma&bgColor=%235965E0)](https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/Move.it-1.0/duplicate)
 
 #### Cloning
 
