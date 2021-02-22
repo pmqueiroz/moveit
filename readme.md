@@ -21,7 +21,7 @@
 <!--  -->
 <br>
 <p align="center">
-    Orphanage Finder platform made with React.js and NextJS using Typescript during the<a src="https://nextlevelweek.com"> NLW (Next Level Week) #04</a>🚀
+    Timer app made with React.js and NextJS using Typescript during the<a src="https://nextlevelweek.com"> NLW (Next Level Week) #04</a>🚀
 </p>
 
 <div align="center">  
