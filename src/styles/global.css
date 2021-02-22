@@ -1,0 +1,68 @@
+* {
+   margin: 0;
+   padding: 0;
+   color: var(--color-background);
+   border: none;
+   outline: none;
+}
+
+*:focus {
+   outline: none;
+}
+
+body {
+   background: var(--color-text-base);
+   font-family: 'Inter', sans-serif;
+}
+
+body, input, textarea, button {
+   font: 400 1rem 'Inter';
+}
+
+button {
+   cursor: pointer;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+}
+
+::-webkit-scrollbar {
+   width: 0.7rem;
+}
+::-webkit-scrollbar-track {
+   background: transparent;
+   border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+   background: var(--color-primary);
+   border-radius: 0.5rem;
+}
+::-webkit-scrollbar-corner { background: transparent; }
+
+:root{
+   --color-white: #FFFFFF;
+   --color-primary: #5965E0;
+   --color-primary-hover: #4953B8;
+   --color-twitter: #2AA9E0;
+   --color-secondary-green: #4CD62B;
+   --color-secondary-red: #E83F5B;
+   --color-background: #666666;
+   --color-gray-line: #DCDDE0;
+   --color-text-base: #f2f3f5;
+   --color-text-title: #f2f3f5;
+   --color-text-highlight: #f2f3f5;
+}
+
+@media (max-width: 1080px) {
+   :root{
+      font-size: 93.75%;
+   }
+}
+
+@media (max-width: 720px) {
+   :root{
+      font-size: 87.5%;
+   }
+}
