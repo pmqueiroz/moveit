@@ -8,6 +8,7 @@ export const Container = styled.div`
    padding-bottom: 1rem;
    border-bottom: 1px solid #d7d8da;
    font-weight: 500;
+   color: var(--color-text-base);
 
    span:first-child{
       font-size: 1.25rem;
