@@ -36,3 +36,24 @@ export const Container = styled.div`
       margin: 0 0.5rem;
    }
 `;
+
+export const ButtonContainer = styled.button`
+   width: 100%;
+   height: 5rem;
+   margin-top: 2rem;
+
+   display: flex;;
+   align-items: center;
+   justify-content: center;
+   border: 0;
+   border-radius: 5px;
+   background: var(--color-primary);
+   color: var(--color-white);
+   font-size: 1.25rem;
+   font-weight: 600; 
+   transition: background-color 0.2s;
+
+   &:hover{
+      background: var(--color-primary-hover);
+   }
+`;
