@@ -6,7 +6,10 @@ export default function Profile() {
          <img src="https://github.com/pmqueiroz.png" alt="Cleiton"/>
          <div>
             <strong>Pedro Queiroz</strong>
-            <p>Level 1</p>
+            <p>
+               <img src="icons/level.svg" alt="Level"/>
+               Level 1
+            </p>
          </div>
       </Container>
    )

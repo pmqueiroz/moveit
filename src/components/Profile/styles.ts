@@ -23,6 +23,12 @@ export const Container = styled.div`
       p {
          font-size: 1rem;
          margin-top: 0.5rem;
+
+         img {
+            width: unset;
+            height: unset;
+            margin-right: 0.5rem; 
+         }
       }
    }
 `;
