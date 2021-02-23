@@ -3,7 +3,7 @@ import { Container } from './styles';
 export default function CompletedChallenges () {
    return (
       <Container>
-         <span>Desafios Completos</span>
+         <span>Completed Challenges</span>
          <span>5</span>
       </Container>
    )   

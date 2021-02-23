@@ -11,7 +11,7 @@ export default function Home() {
   return (
      <>
       <Head>
-         <title>Início | move.it</title>
+         <title>Home | move.it</title>
       </Head>
       <Container>
 
