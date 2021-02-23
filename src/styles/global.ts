@@ -5,7 +5,7 @@ export default createGlobalStyle`
 * {
    margin: 0;
    padding: 0;
-   color: var(--color-background);
+   color: var(--color-text-base);
    border: none;
    outline: none;
 }
@@ -15,7 +15,7 @@ export default createGlobalStyle`
 }
 
 body {
-   background: var(--color-text-base);
+   background: var(--color-background);
    font-family: 'Inter', sans-serif;
 }
 
@@ -52,11 +52,11 @@ a {
    --color-twitter: #2AA9E0;
    --color-secondary-green: #4CD62B;
    --color-secondary-red: #E83F5B;
-   --color-background: #666666;
+   --color-background: #f2f3f5;
    --color-gray-line: #DCDDE0;
-   --color-text-base: #f2f3f5;
-   --color-text-title: #f2f3f5;
-   --color-text-highlight: #f2f3f5;
+   --color-text-base: #666666;
+   --color-text-title: #2E384D;
+   --color-text-highlight: #B3B9FF;
 }
 
 @media (max-width: 1080px) {
@@ -70,15 +70,4 @@ a {
       font-size: 87.5%;
    }
 }
-
-#container {
-   height: 100vh;
-   max-width: 992px;
-   margin: 0 auto;
-   padding: 2.5rem 2rem;
-
-   display: flex;
-   flex-direction: column;
-}
-
 `;
