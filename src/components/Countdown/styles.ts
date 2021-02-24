@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+interface ButtonProps {
+   isActive: boolean;
+}
 
 export const Container = styled.div`
    display: flex;
@@ -37,7 +41,7 @@ export const Container = styled.div`
    }
 `;
 
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.button<ButtonProps>`
    width: 100%;
    height: 5rem;
    margin-top: 2rem;
@@ -53,7 +57,25 @@ export const ButtonContainer = styled.button`
    font-weight: 600; 
    transition: background-color 0.2s;
 
-   &:hover{
+   &:not(:disabled):hover{
       background: var(--color-primary-hover);
    }
+
+   &:disabled {
+      background: var(--color-white);
+      color: var(--color-text-base);
+      cursor: not-allowed;
+   }
+
+   ${(props) => !props.isActive === false
+      && css`
+         background: var(--color-white);
+         color: var(--color-text-title);
+         transition: background-color 0.2s;
+
+         &:hover {
+            background: var(--color-secondary-red);
+            color: var(--color-white);
+         }
+      `}
 `;
