@@ -1,20 +1,27 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ChallengesContext } from "../../context/ChallengesContext";
 
 import { Container } from './style';
 
 
 export default function Button(){
-   const [counter, setCounter] = useState(1);
+   const { currentExperience, experienceToNextLevel } = useContext(ChallengesContext);
+   const percantToNextLevel = Math.round(currentExperience * 100) / experienceToNextLevel;
+
    return (
-      <Container progressBar={'50%'}>
+      <Container progressBar={`${percantToNextLevel}%`}>
          <span>0 xp</span>
          <div>
             <div />
-            <span>
-               300 xp
-            </span>
+            {currentExperience ?
+               <span>
+                  {currentExperience} xp
+               </span>
+               :
+               null
+            }
          </div>
-         <span>600 xp</span>
+         <span>{experienceToNextLevel} xp</span>
       </Container>
    )
 }
