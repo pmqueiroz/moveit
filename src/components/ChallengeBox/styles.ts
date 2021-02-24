@@ -11,6 +11,7 @@ export const Container = styled.div`
    align-items: center;
    justify-content: center;
    text-align: center;
+   border-radius: 5px;
 
    .challengeActive {
       height: 100%;
