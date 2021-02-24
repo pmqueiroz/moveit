@@ -67,6 +67,13 @@ export const ButtonContainer = styled.button<ButtonProps>`
       cursor: not-allowed;
    }
 
+   object, img {
+      margin-left: 0.75rem;
+      svg:hover {
+         color: var(--color-white);
+      }
+   }
+
    ${(props) => !props.isActive === false
       && css`
          background: var(--color-white);

@@ -3,7 +3,7 @@ import { ChallengesContext } from '../../context/ChallengesContext';
 import { Container, ButtonContainer } from './styles';
 
 let countdownTimeout: NodeJS.Timeout;
-let countdownDuration = 0.1 * 60
+let countdownDuration = 25 * 60
 
 export default function Coutdown() {
    const { startNewChallenge } = useContext(ChallengesContext);
@@ -60,6 +60,7 @@ export default function Coutdown() {
                disabled
             >
                Cycle Finished
+               <img src="icons/success.svg" alt="Cycle Finished"/>
             </ButtonContainer>
          ) : (
             <ButtonContainer 
@@ -67,8 +68,13 @@ export default function Coutdown() {
                onClick={() => handleCountdownState(!isActive)}
                isActive={isActive}
             >
-               {isActive ? 'Stop' : 'Start'} 
+               {isActive ? 'Stop' : 'Start'}
                &nbsp; Cycle
+               {isActive ? (
+                  <object data="icons/close.svg" />
+               ) : (
+                  <object data="icons/play.svg"/>
+               )}
             </ButtonContainer>
          )
       }
