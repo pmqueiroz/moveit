@@ -7,6 +7,7 @@ export default createGlobalStyle`
    padding: 0;
    border: none;
    outline: none;
+   box-sizing: border-box;
 }
 
 *:focus {

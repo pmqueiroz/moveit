@@ -55,7 +55,7 @@ export default function Coutdown() {
                isActive={false}
                disabled
             >
-               Cicle Finished
+               Cycle Finished
             </ButtonContainer>
          ) : (
             <ButtonContainer 
@@ -64,7 +64,7 @@ export default function Coutdown() {
                isActive={isActive}
             >
                {isActive ? 'Stop' : 'Start'} 
-               &nbsp; cicle
+               &nbsp; Cycle
             </ButtonContainer>
          )
       }
