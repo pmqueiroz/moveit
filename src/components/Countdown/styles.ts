@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 interface ButtonProps {
    isActive: boolean;
+   hasCompletedChallenge: boolean;
 }
 
 export const Container = styled.div`
@@ -56,6 +57,7 @@ export const ButtonContainer = styled.button<ButtonProps>`
    font-size: 1.25rem;
    font-weight: 600; 
    transition: background-color 0.2s;
+   border-bottom: solid 0.25rem transparent;
 
    &:not(:disabled):hover{
       background: var(--color-primary-hover);
@@ -67,22 +69,28 @@ export const ButtonContainer = styled.button<ButtonProps>`
       cursor: not-allowed;
    }
 
-   object, img {
+   svg, img {
       margin-left: 0.75rem;
+      fill: var(--color-white);
       svg:hover {
          color: var(--color-white);
       }
    }
 
-   ${(props) => !props.isActive === false
+   ${(props) => props.isActive === true
       && css`
          background: var(--color-white);
          color: var(--color-text-title);
          transition: background-color 0.2s;
 
-         &:hover {
-            background: var(--color-secondary-red);
-            color: var(--color-white);
-         }
-      `}
+      &:hover {
+         background: var(--color-secondary-red);
+         color: var(--color-white);
+      }
+   `}
+
+   ${(props) => props.hasCompletedChallenge === true
+      && css`
+         border-bottom: solid 0.25rem var(--color-secondary-green);
+   `}
 `;

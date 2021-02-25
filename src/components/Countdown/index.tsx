@@ -1,6 +1,6 @@
-import { useState, useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import { CountdownContext } from '../../context/CountdownContext';
-import { ChallengesContext } from '../../context/ChallengesContext';
+import { FiPlay, FiX } from 'react-icons/fi';
 import { Container, ButtonContainer } from './styles';
 
 export default function Coutdown() {
@@ -34,6 +34,7 @@ export default function Coutdown() {
             <ButtonContainer 
                isActive={false}
                disabled
+               hasCompletedChallenge={hasFinished}
             >
                Cycle Finished
                <img src="icons/success.svg" alt="Cycle Finished"/>
@@ -43,13 +44,14 @@ export default function Coutdown() {
                type="button" 
                onClick={() => handleCountdownState(!isActive)}
                isActive={isActive}
+               hasCompletedChallenge={false}
             >
                {isActive ? 'Stop' : 'Start'}
                &nbsp; Cycle
                {isActive ? (
-                  <object data="icons/close.svg" />
+                  <FiX />
                ) : (
-                  <object data="icons/play.svg"/>
+                  <FiPlay />
                )}
             </ButtonContainer>
          )
