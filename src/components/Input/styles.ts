@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { Form } from '@unform/web';
 
-export const Container = styled.div`
+export const Container = styled(Form)`
    width: 22rem;
    height: 3.75rem;
+   display: flex;
 
    input {
       flex: 1;
