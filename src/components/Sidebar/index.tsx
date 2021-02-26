@@ -1,21 +1,12 @@
 import { Container, Link } from './styles';
 import { FiHome, FiAward } from 'react-icons/fi';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/Auth';
 
 export default function Header () {
    const router = useRouter();
-
-   const [isValidPath, setIsValidPath] = useState(false);
-
-   useEffect(() => {
-      if (router.pathname === '/' || router.pathname === '/leaderboard') {
-         setIsValidPath(true);
-      } else {
-         setIsValidPath(false);
-      }
-   }, []);
-
+   const { isValidPath } = useContext(AuthContext);
 
    return (
       <>

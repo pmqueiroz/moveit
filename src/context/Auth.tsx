@@ -5,6 +5,7 @@ import jwt from 'jsonwebtoken';
 
 type AuthContextData = {
    authToken: string;
+   isValidPath: boolean;
    checkisLogged: () => void;
 }
 
@@ -17,7 +18,17 @@ export const AuthContext = createContext({} as AuthContextData);
 export function AuthProvider({ children }: AuthProvder) {
    const [authToken, setAuthToken] = useState(null);
 
+   const [isValidPath, setIsValidPath] = useState(false);
+
    const router = useRouter();
+
+   useEffect(() => {
+      if (router.pathname === '/' || router.pathname === '/leaderboard') {
+         setIsValidPath(true);
+      } else {
+         setIsValidPath(false);
+      }
+   }, [router]);
 
    useEffect(() => {
       // const token = Cookie.get('@moveit:login');
@@ -50,6 +61,7 @@ export function AuthProvider({ children }: AuthProvder) {
       <AuthContext.Provider 
          value = {{
             authToken,
+            isValidPath,
             checkisLogged
          }}
       >
