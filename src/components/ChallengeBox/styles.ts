@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
    height: 100%;
    background: var(--color-white);
-   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+   box-shadow: 0 0 60px var(--color-shadow);
    padding: 1.5rem 2rem;
 
    display: flex;

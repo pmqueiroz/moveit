@@ -9,7 +9,6 @@ import { Container } from '../styles/pages/home';
 import ChallengeBox from '../components/ChallengeBox';
 import { CountdownProvider } from '../context/CountdownContext';
 import { GetServerSideProps } from 'next';
-import { useEffect } from 'react';
 import { ChallegesProvider } from '../context/ChallengesContext';
 
 

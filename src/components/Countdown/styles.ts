@@ -18,7 +18,7 @@ export const Container = styled.div`
       align-items: center;
       justify-content: space-evenly;
       background: var(--color-white);
-      box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 60px var(--color-shadow);
       border-radius: 5px;
       font-size: 8.5rem;
       text-align: center;

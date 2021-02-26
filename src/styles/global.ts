@@ -57,6 +57,7 @@ a {
    --color-text-base: #666666;
    --color-text-title: #2E384D;
    --color-text-highlight: #B3B9FF;
+   --color-shadow: rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 1080px) {
