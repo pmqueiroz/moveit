@@ -118,14 +118,15 @@ $ git push origin {branch-name}
 Then send a Pull Request that will be analyzed and approved if it helps with the project
 
 ### ToDo (2.0 Features) 📝
-[X] Login Page (github username)
-[ ] Side Bar
-[ ] Progress bar on button
-[ ] Twitter Sharing
-[ ] Github OAuth
-[ ] Leaderboard Page
-[ ] Responsive
-[ ] PWA
+
+- [X] Login Page (github username)
+- [ ] Side Bar
+- [ ] Progress bar on button
+- [ ] Twitter Sharing
+- [ ] Github OAuth
+- [ ] Leaderboard Page
+- [ ] Responsive
+- [ ] PWA
 
 
 ### License 📝
