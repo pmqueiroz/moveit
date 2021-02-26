@@ -8,10 +8,25 @@ import Head from 'next/head';
 import { Container } from '../styles/pages/home';
 import ChallengeBox from '../components/ChallengeBox';
 import { CountdownProvider } from '../context/CountdownContext';
+import { GetServerSideProps } from 'next';
+import { useEffect } from 'react';
+import { ChallegesProvider } from '../context/ChallengesContext';
 
-export default function Home() {
+
+type cookieProps = {
+   level: number;
+   currentExperience: number;
+   challengesCompleted: number;
+}
+
+export default function Home(props: cookieProps) {
+
   return (
-     <>
+   <ChallegesProvider
+      level={props.level}
+      currentExperience={props.currentExperience}
+      challengesCompleted={props.challengesCompleted}
+   >
       <Head>
          <title>Home | move.it</title>
       </Head>
@@ -32,6 +47,18 @@ export default function Home() {
             </section>
          </CountdownProvider>
       </Container>
-     </>
+     </ChallegesProvider>
   )
+}
+
+export const getServerSideProps: GetServerSideProps<cookieProps> = async (ctx) => {
+   const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
+
+   return {
+      props: {
+         level: Number(level),
+         currentExperience: Number(currentExperience),
+         challengesCompleted: Number(challengesCompleted)
+      }
+   }
 }

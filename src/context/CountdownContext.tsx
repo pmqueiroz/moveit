@@ -13,7 +13,7 @@ type CountdownProviderProps = {
    children: ReactNode;
 }
 
-let countdownDuration = 25 * 60;
+let countdownDuration = 0.05 * 60;
 let countdownTimeout: NodeJS.Timeout;
 
 export const CountdownContext = createContext({} as CountdownContextData);
