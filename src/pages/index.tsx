@@ -36,12 +36,12 @@ export default function Home(props: cookieProps) {
          <CountdownProvider>
             <section>
                <div className="leftContainer">
-                     <Profile />
-                     <CompletedChallenges />
-                     <Countdown />
+                  <Profile />
+                  <CompletedChallenges />
+                  <Countdown />
                </div>
                <div className="rightContainer">
-                     <ChallengeBox />
+                  <ChallengeBox />
                </div>
             </section>
          </CountdownProvider>

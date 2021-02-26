@@ -13,6 +13,7 @@ export const Container = styled(Form)`
       border-radius: 8px 0 0 8px;
       background: linear-gradient(to right, rgba(73, 83, 184, 1) , rgba(73, 83, 184, 0.2));
       border: 2px solid transparent;
+      color: var(--color-white);
 
       &::placeholder{
          color: var(--color-text-highlight);
