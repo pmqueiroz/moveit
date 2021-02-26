@@ -11,6 +11,8 @@ export default function Header () {
    useEffect(() => {
       if (router.pathname === '/' || router.pathname === '/leaderboard') {
          setIsValidPath(true);
+      } else {
+         setIsValidPath(false);
       }
    }, []);
 
